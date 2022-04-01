@@ -18,3 +18,8 @@
 
 (defn vectors "https://4clojure.oxal.org/#/problem/6" []
   (= [:a :b :c] (list :a :b :c) (vec '(:a :b :c)) (vector :a :b :c)))
+
+(defn conj_on_vectors "https://4clojure.oxal.org/#/problem/7" []
+  (let [result [1 2 3 4]]
+  (and (= result (conj [1 2 3] 4))
+       (= result (conj [1 2] 3 4))))) 
